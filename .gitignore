@@ -4,6 +4,9 @@
 
 /.vs
 /chapter1/node_modules
+/chapter2/ProjectAPIDemo/.vs
 /chapter2/ProjectAPIDemo/.vs/ProjectAPIDemo/v16
 /chapter2/ProjectAPIDemo/ProjectAPIDemo/obj
-/chapter2/ProjectAPIDemo/ProjectAPIDemo/bin/Debug/net5.0
+/chapter2/ProjectAPIDemo/ProjectAPIDemo/bin
+/.vscode
+chapter2/ProjectAPIDemo/.vs/ProjectAPIDemo/DesignTimeBuild/.dtbcache.v2
