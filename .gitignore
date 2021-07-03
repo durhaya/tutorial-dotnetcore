@@ -3,10 +3,11 @@
 ################################################################################
 
 /.vs
+/.vscode
 /chapter1/node_modules
 /chapter2/ProjectAPIDemo/.vs
-/chapter2/ProjectAPIDemo/.vs/ProjectAPIDemo/v16
 /chapter2/ProjectAPIDemo/ProjectAPIDemo/obj
 /chapter2/ProjectAPIDemo/ProjectAPIDemo/bin
-/.vscode
-chapter2/ProjectAPIDemo/.vs/ProjectAPIDemo/DesignTimeBuild/.dtbcache.v2
+/chapter3/ProjectAPIDemo/.vs
+/chapter3/ProjectAPIDemo/ProjectAPIDemo/obj
+/chapter3/ProjectAPIDemo/ProjectAPIDemo/bin
