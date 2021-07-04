@@ -160,3 +160,12 @@ Introducing EF
 Practice:
     Create Project Model
     Add all respective methods for the crud operation
+
+    	NOTE: IN memory database doesn't throw error regarding foreign keys.
+
+
+Topics:
+-------
+Middle ware
+MVC Invocation pipeline
+	Validation should be part of invocation pipeline
