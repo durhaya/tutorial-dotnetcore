@@ -44,3 +44,65 @@ Chapter 4
 ---------
 Renaming of the project.. 
     ProjectAPIDemo to ProjectAPI
+Model Binding
+    Create a folder named Models
+        Create a class named Ticket.cs
+            Demonstrate complex object model binding
+            Model Binding Types - From Body, From Query.. etc..
+            	Note: not a good practice to mix binding types
+Model Validation
+	Validation is not the purpose of end point
+	Model validation with data annotations
+			Required Attribute, min, max etc
+		Its independant from the MVC
+		You have to call this validation
+		https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=net-5.0
+		
+	in real world you have to validate model class object as whole with custom validation logic
+		Conditional When there is an owner then only Due Date cannot be null.
+		For this we have to do custom validation
+        
+    Extend Validation Attribute for custom validation
+        Create a folder ModelValidation
+        Create a class - Ticket_EnsureDueDateForTicketOwner
+            Inherit from ValidationAttribute and override IsValid
+        Assignment:
+	        When you have owner then due date must have and it must be in the future
+		        The trick here is this validation is valid only for the create.. update may have the past date.
+
+Filter pipeline
+	//Authentication
+	//Generic Validation
+	//Retrieve the input data
+	//data validation
+	//application logic / manipulating the data
+	//format the output data
+	//Exception handling
+
+	How filter works
+		https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-5.0
+		
+	Why you need filter pipeline when middle ware is there..
+		middleware is global.. you cannot apply middleware on a particular action method
+		middleware cannot access the MVC data constructs
+
+Action Filters
+    ActionFilterAttribute for Model Validation:
+        Question: Difference between ActionFilterAttribute and ValidationAttribute
+        Use cases: 
+            When you have multiple version of action method and having same model.
+
+        Problem statement: Add ticket enter date while creating the ticket.
+        Create a folder named Filters
+            Add a class named Ticket_EnsureEnteredDateActionFilter.cs
+            Inherit from ActionFilterAttribute and override OnActionExecuting
+
+(Versioning)
+Resource Filters
+	Perfect place to do some generic validations
+		Expired versioning issue
+		Demonstrate to add this filter attribute on controller level
+		Demonstrate to add this filter attribute globally in startup.cs
+		
+Assignment:
+	Entered Date should be earlier than the due date.
